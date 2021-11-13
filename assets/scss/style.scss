@@ -1,18 +1,29 @@
 /* ===== General Styles ===== */
 
-/* == Fonts == */
-@font-face {
-    font-family: LarishNeue;
-    src: url(../fonts/Larish\ Neue\ Semibold.woff2);
+/* Import Variables */
+@import url("variables.scss");
+
+/* Class & Mixin Styles */
+@mixin backgroundBlack() {
+    background: black; 
+    color: white; 
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@mixin h2FontStyle {
+    font-family: LarishNeue;
+    font-size: 6rem;
+}
 
-// font-family: 'Work Sans', sans-serif;
-
-
-/* == Colors == */
-// Colors: #fff / #000
+.RSVPButton {
+    @include backgroundBlack(); 
+    border: 1px solid white; 
+    padding: 25px 60px; 
+    font-size: 1.7rem;
+    &:hover {
+        background: white; 
+        color: black; 
+    }
+}
 
 * {
     margin: 0; 
@@ -24,8 +35,7 @@
 /* ===== Header Styles ===== */
 header {
     height: 100vh; 
-    background: black; 
-    color: white; 
+    @include backgroundBlack(); 
     text-align: center;
     img {
         width: 100vw; 
@@ -35,7 +45,6 @@ header {
         margin: 8vh 0; 
         p {
             padding: 3vh 0;
-            font-size: rem;
         }
         h1 {
             font-family: LarishNeue;
@@ -55,37 +64,28 @@ header {
         img {
             width: 7vw; 
         }
-        button {
-            background: black; 
-            border: 1px solid white; 
-            color: white; 
-            padding: 25px 60px; 
-            font-size: 1.7rem;
-        }
     }
 }
 
 main {
-    > .firstBlackSection {
+    /* Intro */
+    > .introSectionBlack {
         padding: 10vh 0 20vh 0; 
-        background: black;
-        color: white; 
-        section:nth-of-type(1) {
+        @include backgroundBlack();
+        .introText {
             margin: 10vh 5vw 0 5vw; 
             h2 {
-                font-family: LarishNeue;
-                font-size: 6rem;
+                @include h2FontStyle;
             }
         }
-        section:nth-of-type(2) {
+        .introOverview {
             display: flex; 
             justify-content: space-between;
             margin-left: 5vw; 
             article {
                 margin-top: 20vh; 
                 h2 {
-                    font-family: LarishNeue;
-                    font-size: 6rem;
+                    @include h2FontStyle;
                     margin: 2vh 0; 
                 }
             }
@@ -94,6 +94,7 @@ main {
             }
         }
     }
+    /* Main Image Section */
     > .imageSection {
         display: grid; 
         grid-template-columns: 1fr 1fr 1fr;
@@ -119,8 +120,7 @@ main {
             transform: translateY(-10vh); 
             width: 38vw; 
             h2 {
-                font-family: LarishNeue;
-                font-size: 6rem;
+                @include h2FontStyle;
                 line-height: 87px;
                 margin-bottom: 2vh; 
             }
@@ -162,19 +162,18 @@ main {
             transform: translate(20vw, 15vh);
         }
     }
+    /* Golden Bear Section */
     > .theGoldenBearSection {
         > div:nth-of-type(1) {
             padding: 30vh 5vw 5vh 5vw;
-            background: black; 
+            @include backgroundBlack();
             article:nth-of-type(1) {
                 display: flex; 
                 justify-content: space-between;
-                color: white; 
                 div:nth-of-type(1) {
                     width: 25vw; 
                     h2 {
-                        font-family: LarishNeue;
-                        font-size: 6rem;
+                        @include h2FontStyle;
                         margin: 2vh 0; 
                     }
                 }
@@ -208,8 +207,8 @@ main {
         img {
             position: absolute;  
             width: 30%;
-            right: -10%;  
-            top: -20%; 
+            right: -8%;  
+            top: -12%; 
             overflow: hidden;
             z-index: -1; 
             animation: rotatingCircle 10s infinite linear;
@@ -228,8 +227,7 @@ main {
             div:nth-of-type(1) {
                 width: 25vw; 
                 h2 {
-                    font-family: LarishNeue;
-                    font-size: 6rem;
+                    @include h2FontStyle;
                     margin: 2vh 0; 
                 }
             }
@@ -257,23 +255,21 @@ main {
 
 footer {
     overflow-x: hidden;
-    background: black; 
-    color: white;     
+    @include backgroundBlack();  
     .footerBanner {
         overflow-x: hidden; 
         background: white;
         color: black; 
-        width: 2200px; 
+        width: 2000px; 
         transform: rotate(40deg) translateY(150%); 
         .footerBannerAnimation {
-            font-family: LarishNeue;
-            font-size: 7rem;
+            @include h2FontStyle;
             span {
                 -webkit-text-stroke: 1px black;
                 color: white; 
             }
-            animation: my-animation 2s linear infinite alternate;
-            @keyframes my-animation {
+            animation: footerBanner 2s linear infinite alternate;
+            @keyframes footerBanner {
                 from {transform: translateX(0%); }
                 to {transform: translateX(30%); }
             }
@@ -282,19 +278,12 @@ footer {
     }
     .footerTextBlock {
         padding: 10vh 5vw; 
-        margin-bottom: 10vh; ;
+        margin-bottom: 5vh;
         width: 45vw; 
         p:nth-of-type(2) {
             font-family: LarishNeue;
             font-size: 2rem; 
             margin: 4vh 0;
-        }
-        button {
-            background: black; 
-            border: 1px solid white; 
-            color: white; 
-            padding: 20px 50px; 
-            font-size: 1.7rem;
         }
     }
     nav {
@@ -318,7 +307,4 @@ footer {
     }
 }
 
-@media screen and (max-width: 600px) {
-
-}
   
