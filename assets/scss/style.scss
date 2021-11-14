@@ -1,11 +1,9 @@
 /* ===== General Styles ===== */
-
 /* Import Variables */
 @import "fonts.scss";
 @import "mixin.scss";
 @import "classes.scss";
 @import "variables.scss";
-
 
 /* == Colors == */
 // Colors: #fff / #000
@@ -284,8 +282,6 @@ footer {
         }
     }
 }
-
-
 
 @import "mediaqueries.scss";
 
