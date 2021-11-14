@@ -1,0 +1,27 @@
+// Line Height Headlines
+.lineheightHeadlines {
+    line-height: 87px;
+}
+
+// RSVP Buttons
+.RSVPButton {
+    @include backgroundBlack(); 
+    border: 1px solid white; 
+    padding: 25px 60px; 
+    font-size: 1.7rem;
+    &:hover {
+        background: white; 
+        color: black; 
+    }
+}
+
+// Hollow Font Style H1
+.hollowFont {
+    -webkit-text-stroke: 1px white;
+    color: #000; 
+}
+
+// Line Height Text Main Image Section
+.lineheightText {
+    line-height: 35px;
+}

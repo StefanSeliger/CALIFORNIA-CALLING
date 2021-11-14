@@ -1,0 +1,21 @@
+@import "variables.scss";
+
+//Background Style Dark 
+@mixin backgroundBlack() {
+    background: black; 
+    color: white; 
+}
+
+// H2 Font Style
+@mixin h2FontStyle {
+    font-family: $fontFamily;
+    font-size: 6rem;
+}
+
+// Golden & Poppy Bear Section
+@mixin smallFontLarishNeue {
+    font-family: $fontFamily;
+    font-size: 2rem; 
+    margin-bottom: 2vh;
+}
+

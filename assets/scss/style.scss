@@ -1,29 +1,13 @@
 /* ===== General Styles ===== */
 
 /* Import Variables */
-@import url("variables.scss");
+@import "fonts.scss";
+@import "mixin.scss";
+@import "classes.scss";
+@import "variables.scss";
 
-/* Class & Mixin Styles */
-@mixin backgroundBlack() {
-    background: black; 
-    color: white; 
-}
-
-@mixin h2FontStyle {
-    font-family: LarishNeue;
-    font-size: 6rem;
-}
-
-.RSVPButton {
-    @include backgroundBlack(); 
-    border: 1px solid white; 
-    padding: 25px 60px; 
-    font-size: 1.7rem;
-    &:hover {
-        background: white; 
-        color: black; 
-    }
-}
+/* == Colors == */
+// Colors: #fff / #000
 
 * {
     margin: 0; 
@@ -37,6 +21,7 @@ header {
     height: 100vh; 
     @include backgroundBlack(); 
     text-align: center;
+    //Header Line
     img {
         width: 100vw; 
         height: 25vh; 
@@ -44,18 +29,14 @@ header {
     section {
         margin: 8vh 0; 
         p {
-            padding: 3vh 0;
+            margin: 3vh 0;
         }
         h1 {
-            font-family: LarishNeue;
+            font-family: $fontFamily; 
             font-size: 7rem;
-            line-height: 87px;
-        }
-        h1:nth-of-type(2) {
-            -webkit-text-stroke: 1px white;
-            color: #000; 
         }
     }
+    // Header Navigation 
     nav {
         margin: 0 5vw; 
         display: flex; 
@@ -68,12 +49,12 @@ header {
 }
 
 main {
-    /* Intro */
+    // Intro 
     > .introSectionBlack {
         padding: 10vh 0 20vh 0; 
         @include backgroundBlack();
         .introText {
-            margin: 10vh 5vw 0 5vw; 
+            margin: 10vh 30vw 0 5vw; 
             h2 {
                 @include h2FontStyle;
             }
@@ -94,7 +75,7 @@ main {
             }
         }
     }
-    /* Main Image Section */
+    // Main Image Section 
     > .imageSection {
         display: grid; 
         grid-template-columns: 1fr 1fr 1fr;
@@ -121,11 +102,7 @@ main {
             width: 38vw; 
             h2 {
                 @include h2FontStyle;
-                line-height: 87px;
                 margin-bottom: 2vh; 
-            }
-            p {
-                line-height: 35px;
             }
         }
         .imgSectionImg3 {
@@ -143,13 +120,12 @@ main {
         .imgSectionImg5 {
             grid-column: 3/4;
             grid-row: 7/8;
-            transform: translateX(-5vw);
+            transform: translate(-5vw, -5vh);
         }
         .imgSectionText2 {
             grid-column: 2/3;
             grid-row: 8/9;
             transform: translateY(3vh);
-            line-height: 35px;
         }
         .imgSectionImg6 {
             grid-column: 1/2;
@@ -162,7 +138,7 @@ main {
             transform: translate(20vw, 15vh);
         }
     }
-    /* Golden Bear Section */
+    // Golden Bear Section 
     > .theGoldenBearSection {
         > div:nth-of-type(1) {
             padding: 30vh 5vw 5vh 5vw;
@@ -179,10 +155,8 @@ main {
                 }
                 div:nth-of-type(2) {
                     width: 45vw; 
-                    p:nth-of-type(1) {
-                        font-family: LarishNeue;
-                        font-size: 2rem; 
-                        margin-bottom: 2vh;
+                    .smallFontLarishNeue {
+                        @include smallFontLarishNeue; 
                     }
                 }  
             }
@@ -200,6 +174,7 @@ main {
             transform: translate(-4vw, 10vh);
         }
     }
+    // Poppy Bear Section 
     > .poppyBearSection {
         position: relative; 
         overflow: hidden;
@@ -233,10 +208,8 @@ main {
             }
             div:nth-of-type(2) {
                 width: 45vw; 
-                p:nth-of-type(1) {
-                    font-family: LarishNeue;
-                    font-size: 2rem; 
-                    margin-bottom: 2vh;
+                .smallFontLarishNeue {
+                    @include smallFontLarishNeue; 
                 }
             }  
         }
@@ -256,6 +229,7 @@ main {
 footer {
     overflow-x: hidden;
     @include backgroundBlack();  
+    // Footer Banner 
     .footerBanner {
         overflow-x: hidden; 
         background: white;
@@ -267,27 +241,29 @@ footer {
             span {
                 -webkit-text-stroke: 1px black;
                 color: white; 
+                @include h2FontStyle;
             }
-            animation: footerBanner 2s linear infinite alternate;
+            animation: footerBanner 3s linear infinite alternate;
             @keyframes footerBanner {
                 from {transform: translateX(0%); }
                 to {transform: translateX(30%); }
             }
-        }
-        
+        }   
     }
+    // Footer Text Block
     .footerTextBlock {
         padding: 10vh 5vw; 
         margin-bottom: 5vh;
         width: 45vw; 
-        p:nth-of-type(2) {
-            font-family: LarishNeue;
-            font-size: 2rem; 
-            margin: 4vh 0;
+        .smallFontLarishNeue {
+            @include smallFontLarishNeue; 
+            margin: 4vh 0; 
         }
     }
+    // Footer Navigation
     nav {
         display: flex;
+        flex-wrap: wrap; 
         justify-content: space-between;
         padding: 10vh 15vw 5vh 5vw; 
         .socialMediaLogo  {        
@@ -307,4 +283,3 @@ footer {
     }
 }
 
-  

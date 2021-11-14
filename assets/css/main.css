@@ -1,7 +1,15 @@
 /* ===== General Styles ===== */
 /* Import Variables */
-@import url("variables.scss");
-/* Class & Mixin Styles */
+/* == Fonts == */
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@font-face {
+  font-family: LarishNeue;
+  src: url(../fonts/Larish\ Neue\ Semibold.woff2);
+}
+.lineheightHeadlines {
+  line-height: 87px;
+}
+
 .RSVPButton {
   background: black;
   color: white;
@@ -14,6 +22,16 @@
   color: black;
 }
 
+.hollowFont {
+  -webkit-text-stroke: 1px white;
+  color: #000;
+}
+
+.lineheightText {
+  line-height: 35px;
+}
+
+/* == Colors == */
 * {
   margin: 0;
   padding: 0;
@@ -36,16 +54,11 @@ header section {
   margin: 8vh 0;
 }
 header section p {
-  padding: 3vh 0;
+  margin: 3vh 0;
 }
 header section h1 {
-  font-family: LarishNeue;
+  font-family: "LarishNeue";
   font-size: 7rem;
-  line-height: 87px;
-}
-header section h1:nth-of-type(2) {
-  -webkit-text-stroke: 1px white;
-  color: #000;
 }
 header nav {
   margin: 0 5vw;
@@ -57,21 +70,16 @@ header nav img {
   width: 7vw;
 }
 
-main {
-  /* Intro */
-  /* Main Image Section */
-  /* Golden Bear Section */
-}
 main > .introSectionBlack {
   padding: 10vh 0 20vh 0;
   background: black;
   color: white;
 }
 main > .introSectionBlack .introText {
-  margin: 10vh 5vw 0 5vw;
+  margin: 10vh 30vw 0 5vw;
 }
 main > .introSectionBlack .introText h2 {
-  font-family: LarishNeue;
+  font-family: "LarishNeue";
   font-size: 6rem;
 }
 main > .introSectionBlack .introOverview {
@@ -83,7 +91,7 @@ main > .introSectionBlack .introOverview article {
   margin-top: 20vh;
 }
 main > .introSectionBlack .introOverview article h2 {
-  font-family: LarishNeue;
+  font-family: "LarishNeue";
   font-size: 6rem;
   margin: 2vh 0;
 }
@@ -117,13 +125,9 @@ main > .imageSection .imgSectionText1 {
   width: 38vw;
 }
 main > .imageSection .imgSectionText1 h2 {
-  font-family: LarishNeue;
+  font-family: "LarishNeue";
   font-size: 6rem;
-  line-height: 87px;
   margin-bottom: 2vh;
-}
-main > .imageSection .imgSectionText1 p {
-  line-height: 35px;
 }
 main > .imageSection .imgSectionImg3 {
   width: 20vw;
@@ -140,13 +144,12 @@ main > .imageSection .imgSectionImg4 {
 main > .imageSection .imgSectionImg5 {
   grid-column: 3/4;
   grid-row: 7/8;
-  transform: translateX(-5vw);
+  transform: translate(-5vw, -5vh);
 }
 main > .imageSection .imgSectionText2 {
   grid-column: 2/3;
   grid-row: 8/9;
   transform: translateY(3vh);
-  line-height: 35px;
 }
 main > .imageSection .imgSectionImg6 {
   grid-column: 1/2;
@@ -171,15 +174,15 @@ main > .theGoldenBearSection > div:nth-of-type(1) article:nth-of-type(1) div:nth
   width: 25vw;
 }
 main > .theGoldenBearSection > div:nth-of-type(1) article:nth-of-type(1) div:nth-of-type(1) h2 {
-  font-family: LarishNeue;
+  font-family: "LarishNeue";
   font-size: 6rem;
   margin: 2vh 0;
 }
 main > .theGoldenBearSection > div:nth-of-type(1) article:nth-of-type(1) div:nth-of-type(2) {
   width: 45vw;
 }
-main > .theGoldenBearSection > div:nth-of-type(1) article:nth-of-type(1) div:nth-of-type(2) p:nth-of-type(1) {
-  font-family: LarishNeue;
+main > .theGoldenBearSection > div:nth-of-type(1) article:nth-of-type(1) div:nth-of-type(2) .smallFontLarishNeue {
+  font-family: "LarishNeue";
   font-size: 2rem;
   margin-bottom: 2vh;
 }
@@ -225,15 +228,15 @@ main > .poppyBearSection article div:nth-of-type(1) {
   width: 25vw;
 }
 main > .poppyBearSection article div:nth-of-type(1) h2 {
-  font-family: LarishNeue;
+  font-family: "LarishNeue";
   font-size: 6rem;
   margin: 2vh 0;
 }
 main > .poppyBearSection article div:nth-of-type(2) {
   width: 45vw;
 }
-main > .poppyBearSection article div:nth-of-type(2) p:nth-of-type(1) {
-  font-family: LarishNeue;
+main > .poppyBearSection article div:nth-of-type(2) .smallFontLarishNeue {
+  font-family: "LarishNeue";
   font-size: 2rem;
   margin-bottom: 2vh;
 }
@@ -261,13 +264,15 @@ footer .footerBanner {
   transform: rotate(40deg) translateY(150%);
 }
 footer .footerBanner .footerBannerAnimation {
-  font-family: LarishNeue;
+  font-family: "LarishNeue";
   font-size: 6rem;
-  animation: footerBanner 2s linear infinite alternate;
+  animation: footerBanner 3s linear infinite alternate;
 }
 footer .footerBanner .footerBannerAnimation span {
   -webkit-text-stroke: 1px black;
   color: white;
+  font-family: "LarishNeue";
+  font-size: 6rem;
 }
 @keyframes footerBanner {
   from {
@@ -282,13 +287,15 @@ footer .footerTextBlock {
   margin-bottom: 5vh;
   width: 45vw;
 }
-footer .footerTextBlock p:nth-of-type(2) {
-  font-family: LarishNeue;
+footer .footerTextBlock .smallFontLarishNeue {
+  font-family: "LarishNeue";
   font-size: 2rem;
+  margin-bottom: 2vh;
   margin: 4vh 0;
 }
 footer nav {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding: 10vh 15vw 5vh 5vw;
 }
