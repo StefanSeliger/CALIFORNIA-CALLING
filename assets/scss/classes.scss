@@ -6,18 +6,18 @@
 // RSVP Buttons
 .RSVPButton {
     @include backgroundBlack(); 
-    border: 1px solid white; 
+    border: 1px solid #fff ; 
     padding: 25px 60px; 
     font-size: 1.7rem;
     &:hover {
-        background: white; 
-        color: black; 
+        background: #fff ; 
+        color: #000; 
     }
 }
 
 // Hollow Font Style H1
 .hollowFont {
-    -webkit-text-stroke: 1px white;
+    -webkit-text-stroke: 1px #fff ;
     color: #000; 
 }
 

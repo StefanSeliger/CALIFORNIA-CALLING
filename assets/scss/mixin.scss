@@ -2,14 +2,20 @@
 
 //Background Style Dark 
 @mixin backgroundBlack() {
-    background: black; 
-    color: white; 
+    background: #000; 
+    color: #fff; 
 }
 
 // H2 Font Style
 @mixin h2FontStyle {
     font-family: $fontFamily;
     font-size: 6rem;
+}
+
+// H2 Font Style - Media Queries 
+@mixin h2FontStyleMobile {
+    font-family: $fontFamily;
+    font-size: 4rem;
 }
 
 // Golden & Poppy Bear Section
