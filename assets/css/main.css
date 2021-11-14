@@ -162,27 +162,27 @@ main > .imageSection .imgSectionImg7 {
   grid-row: 9/10;
   transform: translate(20vw, 15vh);
 }
-main > .theGoldenBearSection > div:nth-of-type(1) {
+main .theGoldenBearSection .backgroundBlackGoldenBear {
   padding: 30vh 5vw 5vh 5vw;
   background: #000;
   color: #fff;
 }
-main > .theGoldenBearSection > div:nth-of-type(1) article:nth-of-type(1) {
+main .theGoldenBearSection .backgroundBlackGoldenBear > article {
   display: flex;
   justify-content: space-between;
 }
-main > .theGoldenBearSection > div:nth-of-type(1) article:nth-of-type(1) div:nth-of-type(1) {
+main .theGoldenBearSection .backgroundBlackGoldenBear > article div:nth-of-type(1) {
   width: 25vw;
 }
-main > .theGoldenBearSection > div:nth-of-type(1) article:nth-of-type(1) div:nth-of-type(1) h2 {
+main .theGoldenBearSection .backgroundBlackGoldenBear > article div:nth-of-type(1) h2 {
   font-family: "LarishNeue";
   font-size: 6rem;
   margin: 2vh 0;
 }
-main > .theGoldenBearSection > div:nth-of-type(1) article:nth-of-type(1) div:nth-of-type(2) {
+main .theGoldenBearSection .backgroundBlackGoldenBear > article div:nth-of-type(2) {
   width: 45vw;
 }
-main > .theGoldenBearSection > div:nth-of-type(1) article:nth-of-type(1) div:nth-of-type(2) .smallFontLarishNeue {
+main .theGoldenBearSection .backgroundBlackGoldenBear > article div:nth-of-type(2) .smallFontLarishNeue {
   font-family: "LarishNeue";
   font-size: 2rem;
   margin-bottom: 2vh;
@@ -424,20 +424,20 @@ footer nav .ngoLogo img {
     grid-row: 10/11;
     transform: translate(45vw, -4vh);
   }
-  main > .theGoldenBearSection > div:nth-of-type(1) {
+  main .theGoldenBearSection .backgroundBlackGoldenBear {
     padding: 5vh 5vw 5vh 5vw;
   }
-  main > .theGoldenBearSection > div:nth-of-type(1) article:nth-of-type(1) {
+  main .theGoldenBearSection .backgroundBlackGoldenBear article:nth-of-type(1) {
     display: block;
   }
-  main > .theGoldenBearSection > div:nth-of-type(1) article:nth-of-type(1) div:nth-of-type(1) {
+  main .theGoldenBearSection .backgroundBlackGoldenBear article:nth-of-type(1) div:nth-of-type(1) {
     width: 100vw;
   }
-  main > .theGoldenBearSection > div:nth-of-type(1) article:nth-of-type(1) div:nth-of-type(1) .lineheightHeadlines {
+  main .theGoldenBearSection .backgroundBlackGoldenBear article:nth-of-type(1) div:nth-of-type(1) .lineheightHeadlines {
     font-size: 4rem;
     line-height: 45px;
   }
-  main > .theGoldenBearSection > div:nth-of-type(1) article:nth-of-type(1) div:nth-of-type(2) {
+  main .theGoldenBearSection .backgroundBlackGoldenBear article:nth-of-type(1) div:nth-of-type(2) {
     width: 100vw;
   }
   main > .goldenBearImageSection img:nth-of-type(1) {

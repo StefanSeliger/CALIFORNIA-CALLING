@@ -139,11 +139,11 @@ main {
         }
     }
     // Golden Bear Section 
-    > .theGoldenBearSection {
-        > div:nth-of-type(1) {
+    .theGoldenBearSection {
+        .backgroundBlackGoldenBear {
             padding: 30vh 5vw 5vh 5vw;
             @include backgroundBlack();
-            article:nth-of-type(1) {
+            > article {
                 display: flex; 
                 justify-content: space-between;
                 div:nth-of-type(1) {
